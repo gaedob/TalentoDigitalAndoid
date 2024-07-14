@@ -1,3 +1,4 @@
+package DesafioOperandoConArreglos;
 public class MultiplosDeTres {
 
     public static void main(String[] args) {
