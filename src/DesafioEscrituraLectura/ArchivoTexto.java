@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class ArchivoTexto {
     // Crear el método crearArchivo
     public static void crearArchivo(String directorio, String fichero) {
-        File dir = new File(directorio);
+        File dir = new File("src/" + directorio);
 
         // Validar si el directorio existe
         if (!dir.exists()) {
@@ -56,7 +56,7 @@ public class ArchivoTexto {
 
     // Crear el método buscarTexto
     public static void buscarTexto(String nombreFichero, String texto) {
-        File file = new File(nombreFichero);
+        File file = new File("src/" + nombreFichero);
 
         // Validar si el fichero existe
         if (!file.exists()) {
