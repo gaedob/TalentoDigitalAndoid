@@ -47,6 +47,7 @@ public class ArchivoTexto {
             while (iterator.hasNext()) {
                 writer.write(iterator.next() + System.lineSeparator());
             }
+            writer.close();
 
             System.out.println("Archivo creado y datos escritos en " + file.getPath());
         } catch (IOException e) {
@@ -59,10 +60,10 @@ public class ArchivoTexto {
         File file = new File("src/" + nombreFichero);
 
         // Validar si el fichero existe
-        if (!file.exists()) {
-            System.out.println("El fichero ingresado no existe");
-            return;
-        }
+            if (!file.exists()) {
+                System.out.println("El fichero ingresado no existe");
+                return;
+            }
 
         // Contar la cantidad de repeticiones del texto
         int count = 0;
@@ -73,6 +74,7 @@ public class ArchivoTexto {
                     count++;
                 }
             }
+            reader.close();
 
             System.out.println("Cantidad de repeticiones del texto -> " + count);
         } catch (IOException e) {

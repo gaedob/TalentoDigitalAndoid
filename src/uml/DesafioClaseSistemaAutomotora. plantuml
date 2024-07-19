@@ -1,0 +1,59 @@
+@startuml
+
+' class Automovil {
+'     - color : String
+'     - patente : String
+' }
+class Taxi {
+    - color : String
+    - patente : String
+    - valorPasaje: double
+    
+    + String getColor()
+    + void setColor(patente : String)
+    + String getPatente()
+    + void setPatente((patente : String)
+    + double getValorPasaje()
+    + void setValorPasaje((valor : double)
+
+    + void pagarPasaje (pasaje : int)
+}
+
+class Bus{
+    - color : String
+    - patente : String
+    - cantidadAsientos : int
+
+    + String getColor()
+    + void setColor(patente : String)
+    + String getPatente()
+    + void setPatente((patente : String)
+    + int getCantidadAsientos()
+    + void setCantidadAsientos(asientos : int)
+
+    + int asientosDisponibles()
+}
+
+class MiniBus{
+    - color : String
+    - patente : String
+    - tipoViaje : String
+    - cantidadAsientos : int
+
+    + String getColor()
+    + void setColor(patente : String)
+    + String getPatente()
+    + void setPatente((patente : String)
+    + String getTipoViajes()
+    + void setTipoViaje((patente : String)
+    + int getCantidadAsientos()
+    + void setCantidadAsientoe(valor : int)
+
+    + void imprimeBus()
+
+}
+
+' Automovil <|-- Taxi
+' Automovil <|-- Bus
+
+@enduml
