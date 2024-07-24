@@ -179,6 +179,7 @@ public class PatronesAnidados {
                    
         } 
 
+
         if (n%2==0 ) {
             int init  = Math.round(n/3);
             System.out.println(init);

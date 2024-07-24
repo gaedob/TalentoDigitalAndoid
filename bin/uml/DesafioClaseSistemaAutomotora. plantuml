@@ -1,6 +1,17 @@
 @startuml
 
+class Vehiculo{
 
+
+    -color: Strin
+    -patente: String
+
+    +getColor():String
+    +setColor(color: String ): void
+
+    +getPatente():String
+    +setpPtenter(patente: String ): void
+}
 
 class Cliente  {
     - edad : int
@@ -16,9 +27,7 @@ class Vendedor  {
 }
 
 
-
-
-class Taxi {
+class Taxi  {
     - color : String
     - patente : String
     - valorPasaje: double
@@ -66,6 +75,18 @@ class MiniBus{
     + void imprimeBus()
 
 }
+Vehiculo <|-- Bus
+Vehiculo <|-- Taxi
+Bus <|-- MiniBus
+
+
+Persona <|-- Cliente
+Persona <|-- Vendedor
+
+Vendedor "1" ..o  "1" Tienda : > trabaja
+Cliente "n" ..o  "1" Tienda : < Atiende
+Vehiculo "n" ..o  "1" Tienda : < Vende
+
 class Persona {
     - rut : String
     - nombre : String
@@ -79,24 +100,20 @@ class Persona {
 class Tienda{
 
     - vendedor : Vendedor
-    - cliente : Cliente
+    - cliente : ArrayList<Cliente>
+    - vehiculo : ArrayList<Vehiculo>
     - nombreTienda : String
     - stock : int
 
-    + String existeStock()
+    + int getStock()
+    + setStock(stok: int)
     + String getNombreTiendar()
-    + void setNombreTiendar(nombreTienda : String)    
+    + void setNombreTiendar(nombreTienda : String)
     + Vendedor getVendedor()
     + void setVendedor(vendedor : Vendedor)
     + ArrayList<Cliente> getClientes()
     + void setClientes(clientes :  ArrayList<Cliente>)
+    + ArrayList<Vehiculo> getVehiculo()
+    + void setVehiculos(vehiculos :  ArrayList<Vehiculo>)
 }
-
-Persona <|-- Cliente
-Persona <|-- Vendedor
-
-Vendedor "1" o..  "1" Tienda : > trabaja
-Cliente "n" ..o  "1" Tienda : < Atiende
-
-
 @enduml

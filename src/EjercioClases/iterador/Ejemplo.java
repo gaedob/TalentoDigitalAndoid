@@ -13,8 +13,9 @@ import java.util.Map;
  */
 
 
-public class Ejemplo {
+public class Ejemplo extends MiPadre{
     public static void main(String[] args) {
+
 
         ArrayList<String> random = new ArrayList<String>();
         random.add("Primero");
@@ -22,6 +23,13 @@ public class Ejemplo {
         random.add("Tercero");
         random.add("Cuarto");
         random.add("Quinto");
+        
+
+        Ejemplo e = new Ejemplo(); 
+  
+
+        String nombre = e.NombreFile;
+        
 
         for (Iterator iterator = random.iterator(); iterator.hasNext();) {
             String elemento = (String) iterator.next();
