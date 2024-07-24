@@ -3,6 +3,15 @@ package com.inforcap.desafioautomotora;
 //Clase Tienda
 public class Tienda {
 
+    @Override
+    public String toString() {
+        return "{" +
+            " vendedor='" + getVendedor() + "'" +
+            ", vehiculo='" + getVehiculo() + "'" +
+            ", stock='" + getStock() + "'" +
+            "}";
+    }
+
     private Vendedor vendedor;
     private Vehiculo vehiculo;
     private int stock;
