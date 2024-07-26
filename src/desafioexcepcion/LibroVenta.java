@@ -64,7 +64,7 @@ public class LibroVenta {
     public static void main(String[] args) {
         // Crear un objeto Scanner para leer la entrada del usuario
         Scanner scanner = new Scanner(System.in);
-        Cliente cliente = new Cliente();
+       
         scanner.useDelimiter("\n");
         // Pedir al usuario que ingrese el valor de n
         System.out.println("");
@@ -72,11 +72,10 @@ public class LibroVenta {
         System.out.println("************* Sistema de Ventas *************");
         System.out.println("************** Enter continua ****************");
 
-
-
         if (scanner.hasNextLine()) {
             scanner.nextLine(); // Consume el carácter de nueva línea si existe
         }
+
         System.out.print("Ingrese Edad del Cliente: ");
         int edad;
         try {
@@ -85,8 +84,6 @@ public class LibroVenta {
             if (edad <= 0) {
                 throw new ExceptionNumero("Exception Edad: El número no puede ser menor o igual a cero");
             }
-
-            cliente.setEdad(edad);
         
         }catch (ExceptionNumero e) {
             System.out.println(e.getMessage());
@@ -97,6 +94,7 @@ public class LibroVenta {
             return;
         }
 
+        Cliente cliente = new Cliente(edad);
         
         if (scanner.hasNextLine()) {
             scanner.nextLine(); // Consume el carácter de nueva línea si existe
@@ -118,7 +116,8 @@ public class LibroVenta {
             System.out.println("Debe ingresa una patente válida");
             return;
         }
-        Vehiculo vehiculo = new  Vehiculo("azul",patente  );
+
+        Vehiculo vehiculo = new  Vehiculo("azul",patente);
 
 
         System.out.print("Ingrese Nombre de la Venta (.txt): ");
