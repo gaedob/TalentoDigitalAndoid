@@ -1,4 +1,4 @@
-package com.inforcap.desafioautomotora;
+package com.inforcap;
 
 public class Automovil {
 
@@ -36,6 +36,10 @@ public class Automovil {
     public boolean isMotorEncendido() {
         return isMotorEncendido;
     }
+    /**
+     * 
+     * @param motorEncendido
+     */
     public void setMotorEncendido(boolean motorEncendido) {
         this.isMotorEncendido = motorEncendido;
     }

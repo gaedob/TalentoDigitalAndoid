@@ -1,4 +1,4 @@
-package com.inforcap.desafioautomotora;
+package com.inforcap;
 
 //Clase Tienda
 public class Tienda {
@@ -47,7 +47,6 @@ public class Tienda {
     }
 
     public String existeStock() {
-        // TODO implement here
         return "cantidad de stock es " + getStock();
     }
 }

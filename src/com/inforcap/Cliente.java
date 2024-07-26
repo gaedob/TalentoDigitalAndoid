@@ -1,4 +1,4 @@
-package com.inforcap.desafioautomotora;
+package com.inforcap;
 //Clase Cliente
 
 public class Cliente extends Persona {

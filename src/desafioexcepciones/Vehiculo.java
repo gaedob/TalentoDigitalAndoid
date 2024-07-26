@@ -1,4 +1,5 @@
-package com.inforcap.desafioautomotora;
+package desafioexcepciones;
+
 
 public class Vehiculo {
 

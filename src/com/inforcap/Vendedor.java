@@ -1,4 +1,4 @@
-package com.inforcap.desafioautomotora;
+package com.inforcap;
 
 //Clase Vendedor
 public class Vendedor extends Persona {

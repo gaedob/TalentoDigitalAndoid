@@ -1,4 +1,4 @@
-package com.inforcap.desafioautomotora;
+package com.inforcap;
 
 //Clase Taxi
 public class Taxi extends Vehiculo {
