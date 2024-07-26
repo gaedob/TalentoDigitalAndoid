@@ -1,4 +1,4 @@
-package desafioexcepciones;
+package desafioexcepcion;
 
 
 public class Cliente {

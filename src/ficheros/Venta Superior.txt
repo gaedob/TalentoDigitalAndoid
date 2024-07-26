@@ -1,0 +1,4 @@
+Venta:Venta Superior
+Patente : 1212
+Edad Cliente: 12
+Fehca Venta; 01102020

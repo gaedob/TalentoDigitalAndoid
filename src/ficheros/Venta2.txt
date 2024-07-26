@@ -1,0 +1,4 @@
+Venta:Venta2.txt
+Patente : 22222
+Edad Cliente: 2
+Fehca Venta; 01102020

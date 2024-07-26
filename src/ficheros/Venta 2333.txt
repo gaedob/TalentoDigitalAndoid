@@ -1,0 +1,4 @@
+Venta:Venta 2333
+Patente : 223232
+Edad Cliente: 22
+Fehca Venta; Fri Jul 26 11:55:40 CLT 2024

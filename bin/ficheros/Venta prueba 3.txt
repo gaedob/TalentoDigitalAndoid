@@ -1,0 +1,4 @@
+Venta:Venta prueba 3
+Patente : 12121
+Edad Cliente: 12
+Fehca Venta; 2024/26/07 12:00:50

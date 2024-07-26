@@ -1,0 +1,4 @@
+Venta:Venta 23
+Patente : 121212
+Edad Cliente: 23
+Fehca Venta; 01102020
