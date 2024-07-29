@@ -1,0 +1,4 @@
+Nombre Venta:venta 157
+Patente : 12233
+Edad Cliente: 10
+Fehca Venta: 2024/26/07 12:50:33

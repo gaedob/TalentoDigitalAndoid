@@ -1,0 +1,9 @@
+{
+  articulo='2'
+  precio='22'
+  descripcion='2'
+  codigo='2'
+  talla='2'
+  marca='2'
+  colo='2'
+}
