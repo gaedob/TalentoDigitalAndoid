@@ -1,4 +1,4 @@
-package com.inforcap;
+package com.inforcap.desafioumlautomotora;
 
 //Clase Tienda
 public class Tienda {

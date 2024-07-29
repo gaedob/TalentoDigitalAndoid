@@ -1,4 +1,4 @@
-package com.inforcap;
+package com.inforcap.desafioumlautomotora;
 
 //Clase Persona
 public class Persona {

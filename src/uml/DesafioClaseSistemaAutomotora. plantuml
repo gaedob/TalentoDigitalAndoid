@@ -116,4 +116,5 @@ class Tienda{
     + ArrayList<Vehiculo> getVehiculo()
     + void setVehiculos(vehiculos :  ArrayList<Vehiculo>)
 }
+
 @enduml

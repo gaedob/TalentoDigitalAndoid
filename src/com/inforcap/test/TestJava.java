@@ -1,6 +1,6 @@
 package com.inforcap.test;
 
-import com.inforcap.Automovil;
+import com.inforcap.desafioumlautomotora.Automovil;
 import java.util.EnumMap;
 
 public class TestJava {

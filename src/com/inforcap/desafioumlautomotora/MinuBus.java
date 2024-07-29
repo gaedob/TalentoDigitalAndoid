@@ -1,4 +1,4 @@
-package com.inforcap;
+package com.inforcap.desafioumlautomotora;
 
 public class MinuBus extends Bus {
 
