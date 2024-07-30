@@ -1,8 +1,7 @@
 package com.inforcap.desafiotiendaindianjeans;
 
-public class ExportarTxt extends  Exportador{
+public abstract class ExportarTxt {
 
-    @Override
     public void exportar() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'exportar'");

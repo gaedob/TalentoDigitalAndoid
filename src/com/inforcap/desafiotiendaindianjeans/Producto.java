@@ -2,15 +2,25 @@ package com.inforcap.desafiotiendaindianjeans;
 
 public class Producto {
 
-    String articulo;
-    String precio;
-    String descripcion;
-    String codigo;
-    String talla;
-    String marca;
-    String colo;
+    private String articulo;
+    private String precio;
+    private String descripcion;
+    private String codigo;
+    private String talla;
+    private String marca;
+    private String colo;
 
     public Producto() {
+    }
+
+    public Producto(String articulo, String precio, String descripcion, String codigo, String talla, String marca, String colo) {
+        this.articulo = articulo;
+        this.precio = precio;
+        this.descripcion = descripcion;
+        this.codigo = codigo;
+        this.talla = talla;
+        this.marca = marca;
+        this.colo = colo;
     }
 
     public String getArticulo() {

@@ -6,7 +6,6 @@ public class Menu {
 
     public static Scanner scanner = new Scanner(System.in);
     public static ProductoServicio productoServicio = new  ProductoServicio();
-
     public static  ExportadorTxt exp = new ExportadorTxt();
 
     public static void Principal() {
@@ -14,15 +13,13 @@ public class Menu {
         System.out.println("");
         System.out.println("");
         System.out.println(" -- Menu de Productos -- ");
-        System.out.println("1 Listar Producto");
-        System.out.println("2 Agregar Producto");
-        System.out.println("3 Exportar Datos");
-        System.out.println("4 Salir");
+        System.out.println("[1] Listar Producto");
+        System.out.println("[2] Agregar Producto");
+        System.out.println("[3] Exportar Datos");
+        System.out.println("[4] Salir");
         System.out.print("Ingrese una opción:");
 
-        // if (scanner.hasNextLine()) {
-        //     scanner.nextLine(); // Consume el carácter de nueva línea si existe
-        // }
+
     }
 
     public static void listarProducto() {
@@ -32,7 +29,10 @@ public class Menu {
    
 
         productoServicio.listarProductos();
+
        
+        Utilidad.tiempoEspera(4);
+        Utilidad.limpiezaPantalla();
         Principal();
 
     }
@@ -41,13 +41,12 @@ public class Menu {
 
         System.out.println("");
         System.out.println(" --- 3 Exportar Productos ---- ");
-        // if (scanner.hasNextLine()) {
-        //     scanner.nextLine(); // Consume el carácter de nueva línea si existe
-        // }
-
         exp.setListaProductos(productoServicio.getListaProductos());
         exp.setFichero("ListaProductos.txt");
         exp.exportar();
+       
+        Utilidad.tiempoEspera(4);
+        Utilidad.limpiezaPantalla();
         Principal();
 
     }
@@ -59,7 +58,8 @@ public class Menu {
         System.out.println(" --- 2 Crear Productos ---- ");
 
         if (scanner.hasNextLine()) {
-            scanner.nextLine(); // Consume el carácter de nueva línea si existe
+            // Consume el carácter de nueva línea si existe
+            scanner.nextLine(); 
          }
 
         System.out.print("Ingresar nombre articulo:");
@@ -85,34 +85,27 @@ public class Menu {
         pr1.setColo(scanner.nextLine());
 
 
-        // pr1.setArticulo("Pantalones");
-        // pr1.setCodigo("2222");
-        // pr1.setColo("colo");
-        // pr1.setDescripcion("descripcion");
-        // pr1.setMarca("marca");
-        // pr1.setPrecio("precio");
-        // pr1.setTalla("talla");
+
         
         productoServicio.agregarProductos(pr1);
         System.out.println("");
         System.out.println("Articulo :");
         System.out.println(pr1.toString());
 
-        // if (scanner.hasNextLine()) {
-        //     scanner.nextLine(); // Consume el carácter de nueva línea si existe
-        // }
+       
+        Utilidad.tiempoEspera(4);
+        Utilidad.limpiezaPantalla();
         Principal();
     }
 
     public static void main(String[] args) {
         Principal();
-       
         try {
             int opcion = 0;
             opcion = scanner.nextInt();
-
             while (opcion != 4) {
-
+                Utilidad.limpiezaPantalla();
+                
                 switch (opcion) {
                     case 1:
                         listarProducto();
@@ -125,11 +118,10 @@ public class Menu {
                         break;
                     default:
                         Principal();
+                        
                 }
-
-               
-
                 opcion = scanner.nextInt();
+
 
             }
         } catch (Exception e) {
@@ -138,7 +130,5 @@ public class Menu {
         } finally {
             scanner.close();
         }
-
     }
-
 }

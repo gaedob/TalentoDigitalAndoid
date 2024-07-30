@@ -30,7 +30,7 @@ public class Ejemplo extends MiPadre{
 
         String nombre = e.NombreFile;
         
-
+        System.err.println(nombre);
         for (Iterator iterator = random.iterator(); iterator.hasNext();) {
             String elemento = (String) iterator.next();
             System.err.println(elemento);
