@@ -26,9 +26,10 @@ public class Utilidad{
 
 
  public static void tiempoEspera(int seconds) {
+       
         for (int i = seconds; i >= 0; i--) {
             try {
-                System.out.print("\r" + i + " segundo de espera........");
+                System.out.print("\r" + i + " segundo de espera !");
                 System.out.flush(); // Asegura que el texto se imprima inmediatamente
                 Thread.sleep(1000); // Espera 1 segundo
             } catch (InterruptedException e) {

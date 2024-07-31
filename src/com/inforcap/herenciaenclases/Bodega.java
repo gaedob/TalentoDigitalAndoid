@@ -28,9 +28,6 @@ public class Bodega {
         List<Bicicleta> biciletaFiltrada= bicicletas.stream()
         .filter(bicicletas -> bicicletas.getCodigo() == codigo)
         .collect(Collectors.toList());
-        
-    
-
         return biciletaFiltrada.get(0);
 
     }
