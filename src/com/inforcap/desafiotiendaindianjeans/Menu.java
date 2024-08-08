@@ -26,7 +26,7 @@ public class Menu {
     }
 
     private static void clearScreen() {
-        Utilidad.tiempoEspera(3);
+        Utilidad.tiempoEspera(2);
         Utilidad.limpiezaPantalla();
         Principal();
     }

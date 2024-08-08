@@ -49,7 +49,7 @@ public class ArchivoServicio {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
-              Producto pr = parseProducto(line);
+              Producto pr = parseProducto(line); //Jeans,15000,Son unos jeans maravillosos,1500,42,Levos,Azul Marino
               if (pr != null){
                 productoServicio.agregarProductos(pr);
                 pr.toString();

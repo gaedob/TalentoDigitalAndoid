@@ -10,8 +10,6 @@ public class Producto {
     private String marca;
     private String colo;
 
-    public Producto() {
-    }
 
     public Producto(String articulo, String precio, String descripcion, String codigo, String talla, String marca, String colo) {
         this.articulo = articulo;
@@ -22,6 +20,11 @@ public class Producto {
         this.marca = marca;
         this.colo = colo;
     }
+
+    public Producto() {
+    }
+
+
 
     public String getArticulo() {
         return this.articulo;
@@ -78,6 +81,9 @@ public class Producto {
     public void setColo(String colo) {
         this.colo = colo;
     }
+   
+
+   
 
     @Override
     public String toString() {
