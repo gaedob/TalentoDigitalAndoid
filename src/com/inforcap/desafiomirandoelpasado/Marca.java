@@ -37,15 +37,15 @@ public class Marca {
         // Los elementos a agregar son “Blokbaster”, “Carrefour” y “Jetix”. Imprimir el nuevo
         // listado en consola.
         marcas.addAll(Arrays.asList("Blokbaster", "Carrefour", "Jetix"));
-        System.out.println(marcas);
+        marcas.forEach(marca -> System.out.println(marca));
 
         // 4. Se dan cuenta que “Blokbaster” en realidad se escribe “Blockbuster” y deciden cambiar
         // la palabra en el listado.
         // Set<String> orden = new TreeSet<>(marcas);
         marcas.remove("Blokbaster");
-        System.out.println(marcas);
+        marcas.forEach(marca -> System.out.println(marca));
         marcas.add("Blockbuster");
-        System.out.println(marcas);
+        marcas.forEach(marca -> System.out.println(marca));
 
         // 5. Lamentablemente, usted se da cuenta que “Carrefour” aún existe y decide borrarlo del
         // listado. Para ello, usted debe remover el elemento número 11 e imprimir el nuevo
@@ -53,14 +53,14 @@ public class Marca {
         // elemento se borró correctamente, ya que arrojará true si se eliminó de manera
         //correcta
         marcas.remove("Carrefour");
-        System.out.println(marcas);
+        marcas.forEach(marca -> System.out.println(marca));
 
         // 6.- Usted se inspira y decide hacer una colección aparte de marcas que podrían estar
         // fuera del mercado. Para ello, usted debe agregar marcas (las que quiera) en una nueva
         // ArrayList<>() llamada “posiblesMarcas” e incorporarlas a la lista de ”marcas”.
         List<String> posiblesMarcas = new ArrayList<>(marcas);
         posiblesMarcas.addAll(Arrays.asList("Marca 1", "Marca 2", "Marca 3"));
-        System.out.println(posiblesMarcas);
+        posiblesMarcas.forEach(marca -> System.out.println(marca));
 
         // 7. A eso de las 11 de la noche, deciden ver cuántos elementos tiene este listado. Es por
         // eso que usted utiliza sus conocimientos y cuenta la cantidad de elementos que
@@ -79,7 +79,7 @@ public class Marca {
 //         2. Luego de muchos recuerdos, deciden agregar los siguientes nombres: “Daniel”,
 // “Paola”, “Facundo”, “Pedro”, ”Jacinta”, “Florencia” y “Juan Pablo”. 
         invitados.addAll(Arrays.asList("Daniel", "Paola", "Facundo", "Pedro", "Jacinta", "Florencia", "Juan Pablo"));
-        System.out.println(invitados);
+        invitados.forEach(invitado -> System.out.println(invitado));
 
 //         3. Su amiga le dice que se acaba de acordar de 3 ex compañeros adicionales y le
 // pregunta si puede agregarlos en un listado aparte de “posibles invitados”, ya que no
@@ -90,17 +90,15 @@ public class Marca {
         posiblesInvitados.addAll(Arrays.asList("Jorge", "Francisco", "Marcos"));
         System.out.println("-----   posiblesInvitados ------");
 
-        posiblesInvitados.forEach(cada
-                -> {
-            System.out.println(cada);
-        }
-        );
+        posiblesInvitados.forEach(cada -> System.out.println(cada));
 
 // 4. Lamentablemente, usted se da cuenta que es mejor no invitar a “Jorge” y decide
 // eliminarlo del listado. Imprima el listado final de invitados para que comiencen a
 // contactarlos lo antes posible. 
         posiblesInvitados.remove("Jorge");
-        System.out.println(posiblesInvitados);
+        posiblesInvitados.forEach(cada -> System.out.println(cada));
+
+        
 
 //         1. Instanciar un Map<>() del tipo <String, Integer> llamado “golosinas” para generar un
 // listado de estas. Usted le comenta a su amiga que le gustaría probar algo llamado
@@ -167,7 +165,8 @@ public class Marca {
 // 3. Dada la hora y lo tarde de la videollamada, deciden solamente contar la cantidad de
 // juegos e imprimirlos en pantalla para algún día volver a jugarlos.
         System.out.println(juegos.size());
-        System.out.println(juegos);
+
+        juegos.forEach(juego -> System.out.println(juego));
 
     }
 
