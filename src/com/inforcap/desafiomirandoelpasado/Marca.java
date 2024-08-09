@@ -88,7 +88,13 @@ public class Marca {
         Set<String> posiblesInvitados = new TreeSet<>(invitados);
 
         posiblesInvitados.addAll(Arrays.asList("Jorge", "Francisco", "Marcos"));
-        System.out.println(posiblesInvitados);
+        System.out.println("-----   posiblesInvitados ------");
+
+        posiblesInvitados.forEach(cada
+                -> {
+            System.out.println(cada);
+        }
+        );
 
 // 4. Lamentablemente, usted se da cuenta que es mejor no invitar a “Jorge” y decide
 // eliminarlo del listado. Imprima el listado final de invitados para que comiencen a
@@ -111,14 +117,29 @@ public class Marca {
 // ● Tabletón a 5 pesos
         golosinas.put("Chocman", 100);
         golosinas.put("Trululú", 100);
-
         golosinas.put("Centella", 100);
-
         golosinas.put("Kilate", 50);
         golosinas.put("Miti-miti", 30);
         golosinas.put("Traga Traga", 150);
         golosinas.put("Tabletón", 5);
-        System.out.println(golosinas);
+        // System.out.println(golosinas);
+
+        System.out.println("--------- entrySet --------");
+        for (Map.Entry<String, Integer> entry : golosinas.entrySet()) {
+            System.out.println("Golosina: " + entry.getKey() + ", Cantidad: " + entry.getValue());
+        }
+
+        System.out.println("--------- keySet() --------");
+
+        for (String key : golosinas.keySet()) {
+            System.out.println("Golosina: " + key + ", Cantidad: " + golosinas.get(key));
+        }
+
+        System.out.println("--------- (key, value) --------");
+
+        golosinas.forEach((key, value)
+                -> System.out.println("Golosina: " + key + ", Cantidad: " + value)
+        );
 
 //        3 . Su amiga le dice que si es posible filtrar aquellas golosinas que costaban menos de
 // 100 pesos para mostrar en sus redes sociales el valor del dinero en el tiempo.
@@ -126,8 +147,12 @@ public class Marca {
         Map<String, Integer> filteredGolosinas = golosinas.entrySet().stream()
                 .filter(entry -> entry.getValue() < 100)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        System.out.println(filteredGolosinas);
 
+        //System.out.println(filteredGolosinas);
+        System.out.println("--------- (key, value) --------");
+        filteredGolosinas.forEach((key, value)
+                -> System.out.println("Golosina: " + key + ", Cantidad: " + value)
+        );
 //         Por último, y no menos importante, se acordaron de aquellos juegos de infancia junto a su
 // amiga. Usted, mientras conversaba, se da cuenta que podría listarlos con un Queue. Es por
 // esto que decide hacer lo siguiente:
