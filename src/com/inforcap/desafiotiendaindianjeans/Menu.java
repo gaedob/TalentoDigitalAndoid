@@ -270,7 +270,7 @@ public class Menu {
         } catch (Exception e) {
             System.out.println("");
             System.out.println("Debe ingresa un número (1 - 6) ...");
-           
+    
             return;
         } finally {
             scanner.close();
